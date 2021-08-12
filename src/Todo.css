@@ -1,0 +1,29 @@
+.todo  {
+    min-width: 10px;
+    max-width: 870px;
+    background-color: rgb(72, 82, 107, 0.5);
+    color: white;
+    padding: 5px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition-duration: 250ms;
+}
+
+.todo > .MuiSvgIcon-root {
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.todo > .MuiSvgIcon-root:hover {
+    color: rgb(255, 129, 129);
+    margin-left: 10px;
+}
+
+.todo:hover {
+    box-shadow: inset 0px 0px 0px 1.3px rgb(255, 255, 255);
+    transform: scale(1.03);
+}

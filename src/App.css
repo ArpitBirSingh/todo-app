@@ -1,39 +1,109 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  height:100vh;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.app__header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app__header > img {
+  margin-left: 22px;
+  margin-top: 10px;
+}
+
+.app__header > h1 {
+  font-family: 'Righteous', cursive;
+  text-shadow: 10px 10px 5px rgb(0, 0, 0);
+  color: white;
+  font-size: 45px;
+  padding-top: 30px;
+  margin: auto;
+  /* transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; */
+  transition-duration: 250ms;
+}
+
+.app__header > h1:hover {
+  color: rgb(86, 207, 255);
+  letter-spacing: 3px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 250ms;
+}
+
+.avatar > h3 {
+  color:#a8b5e9;
+  margin-left: 5px;
+  height: 50px;
+  width: 100px;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  opacity: 0.75;
+}
+
+.todoapp {
+  width: 100vw;
+  min-height: calc(100vh - 90px);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks {
+  background: rgb(33,36,51);
+  background: linear-gradient(90deg, rgba(33,36,51,1) 17%, rgba(8,10,18,1) 50%, rgba(35,39,55,1) 82%);
+  width: 1000px;
+  height: 500px;
+  box-shadow: 1px 1px 18px 2px rgba(119, 136, 170, 0.75);
+  -webkit-box-shadow: 1px 1px 18px 2px rgba(119, 136, 170,0.75);
+  -moz-box-shadow: 1px 1px 18px 2px rgba(119, 136, 170,0.75);
+}
+
+.input {
+  display: flex;
+  margin-top: 30px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.input > input {
+  flex: 0.9;
+  margin-left: 30px;
+  margin-right: 20px;
+  padding: 10px;
+  outline-width: 0;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.input > .MuiSvgIcon-root {
+  background-color: white ;
+  color: black;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input > .MuiSvgIcon-root:hover {
+  box-shadow: 1px 4px 10px 8px rgba(97, 97, 97, 0.466);
+  -webkit-box-shadow: 1px 4px 10px 8px rgba(97, 96, 96, 0.75);
+  -moz-box-shadow: 1px 4px 10px 8px rgba(88, 86, 86, 0.75);
+}
+
+.todos {
+  width: 100vw;
 }
